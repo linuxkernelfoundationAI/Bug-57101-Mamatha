@@ -1,0 +1,4 @@
+# Regeneratable build/boot artifacts (rebuild via build-fixes.md / REPORT.md steps)
+bzImage
+initramfs.cpio.gz
+initramfs/bin/busybox

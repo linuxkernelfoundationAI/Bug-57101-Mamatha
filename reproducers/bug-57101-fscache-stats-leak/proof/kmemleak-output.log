@@ -1,0 +1,83 @@
+=== BEGIN KMEMLEAK OUTPUT ===
+unreferenced object 0xffff88001e1e8b60 (size 32):
+  comm "busybox", pid 830, jiffies 4294674432 (age 8.990s)
+  hex dump (first 32 bytes):
+    80 b3 14 81 ff ff ff ff a0 b3 14 81 ff ff ff ff  ................
+    90 b3 14 81 ff ff ff ff 20 2d 1a 81 ff ff ff ff  ........ -......
+  backtrace:
+    [<ffffffff81763181>] kmemleak_alloc+0x21/0x50
+    [<ffffffff8112322f>] kmem_cache_alloc_trace+0x9f/0x140
+    [<ffffffff8114b6a3>] single_open+0x33/0xc0
+    [<ffffffff811a2d15>] fscache_stats_open+0x15/0x20
+    [<ffffffff8118be1f>] proc_reg_open+0x8f/0x150
+    [<ffffffff8112a03b>] do_dentry_open+0x1eb/0x280
+    [<ffffffff8112a0fc>] finish_open+0x2c/0x40
+    [<ffffffff81139511>] do_last+0x4e1/0xe40
+    [<ffffffff81139f1b>] path_openat+0xab/0x4d0
+    [<ffffffff8113a983>] do_filp_open+0x33/0x80
+    [<ffffffff8112b33f>] do_sys_open+0xdf/0x1c0
+    [<ffffffff8112b44f>] sys_openat+0xf/0x20
+    [<ffffffff81783452>] system_call_fastpath+0x16/0x1b
+    [<ffffffffffffffff>] 0xffffffffffffffff
+unreferenced object 0xffff88001e1e8e80 (size 32):
+  comm "busybox", pid 831, jiffies 4294674455 (age 8.967s)
+  hex dump (first 32 bytes):
+    80 b3 14 81 ff ff ff ff a0 b3 14 81 ff ff ff ff  ................
+    90 b3 14 81 ff ff ff ff 20 2d 1a 81 ff ff ff ff  ........ -......
+  backtrace:
+    [<ffffffff81763181>] kmemleak_alloc+0x21/0x50
+    [<ffffffff8112322f>] kmem_cache_alloc_trace+0x9f/0x140
+    [<ffffffff8114b6a3>] single_open+0x33/0xc0
+    [<ffffffff811a2d15>] fscache_stats_open+0x15/0x20
+    [<ffffffff8118be1f>] proc_reg_open+0x8f/0x150
+    [<ffffffff8112a03b>] do_dentry_open+0x1eb/0x280
+    [<ffffffff8112a0fc>] finish_open+0x2c/0x40
+    [<ffffffff81139511>] do_last+0x4e1/0xe40
+    [<ffffffff81139f1b>] path_openat+0xab/0x4d0
+    [<ffffffff8113a983>] do_filp_open+0x33/0x80
+    [<ffffffff8112b33f>] do_sys_open+0xdf/0x1c0
+    [<ffffffff8112b44f>] sys_openat+0xf/0x20
+    [<ffffffff81783452>] system_call_fastpath+0x16/0x1b
+    [<ffffffffffffffff>] 0xffffffffffffffff
+unreferenced object 0xffff88001e1e8d40 (size 32):
+  comm "busybox", pid 835, jiffies 4294674476 (age 8.946s)
+  hex dump (first 32 bytes):
+    80 b3 14 81 ff ff ff ff a0 b3 14 81 ff ff ff ff  ................
+    90 b3 14 81 ff ff ff ff 20 2d 1a 81 ff ff ff ff  ........ -......
+  backtrace:
+    [<ffffffff81763181>] kmemleak_alloc+0x21/0x50
+    [<ffffffff8112322f>] kmem_cache_alloc_trace+0x9f/0x140
+    [<ffffffff8114b6a3>] single_open+0x33/0xc0
+    [<ffffffff811a2d15>] fscache_stats_open+0x15/0x20
+    [<ffffffff8118be1f>] proc_reg_open+0x8f/0x150
+    [<ffffffff8112a03b>] do_dentry_open+0x1eb/0x280
+    [<ffffffff8112a0fc>] finish_open+0x2c/0x40
+    [<ffffffff81139511>] do_last+0x4e1/0xe40
+    [<ffffffff81139f1b>] path_openat+0xab/0x4d0
+    [<ffffffff8113a983>] do_filp_open+0x33/0x80
+    [<ffffffff8112b33f>] do_sys_open+0xdf/0x1c0
+    [<ffffffff8112b44f>] sys_openat+0xf/0x20
+    [<ffffffff81783452>] system_call_fastpath+0x16/0x1b
+    [<ffffffffffffffff>] 0xffffffffffffffff
+unreferenced object 0xffff88001e1e8dc0 (size 32):
+  comm "busybox", pid 836, jiffies 4294674488 (age 8.934s)
+  hex dump (first 32 bytes):
+    80 b3 14 81 ff ff ff ff a0 b3 14 81 ff ff ff ff  ................
+    90 b3 14 81 ff ff ff ff 20 2d 1a 81 ff ff ff ff  ........ -......
+  backtrace:
+    [<ffffffff81763181>] kmemleak_alloc+0x21/0x50
+    [<ffffffff8112322f>] kmem_cache_alloc_trace+0x9f/0x140
+    [<ffffffff8114b6a3>] single_open+0x33/0xc0
+    [<ffffffff811a2d15>] fscache_stats_open+0x15/0x20
+    [<ffffffff8118be1f>] proc_reg_open+0x8f/0x150
+    [<ffffffff8112a03b>] do_dentry_open+0x1eb/0x280
+    [<ffffffff8112a0fc>] finish_open+0x2c/0x40
+    [<ffffffff81139511>] do_last+0x4e1/0xe40
+    [<ffffffff81139f1b>] path_openat+0xab/0x4d0
+    [<ffffffff8113a983>] do_filp_open+0x33/0x80
+    [<ffffffff8112b33f>] do_sys_open+0xdf/0x1c0
+    [<ffffffff8112b44f>] sys_openat+0xf/0x20
+    [<ffffffff81783452>] system_call_fastpath+0x16/0x1b
+    [<ffffffffffffffff>] 0xffffffffffffffff
+[   16.171323] busybox (839) used greatest stack depth: 5184 bytes left
+=== END KMEMLEAK OUTPUT ===

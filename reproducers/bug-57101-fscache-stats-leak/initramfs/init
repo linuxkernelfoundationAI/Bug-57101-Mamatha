@@ -1,0 +1,36 @@
+#!/bin/busybox sh
+/bin/busybox mount -t proc none /proc
+/bin/busybox mount -t sysfs none /sys
+echo "=== BOOT SUCCESS ==="
+
+echo "=== MOUNT DEBUGFS ==="
+/bin/busybox mount -t debugfs none /sys/kernel/debug
+/bin/busybox mount -t debugfs debugfs /sys/kernel/debug 2>/dev/null
+
+echo "=== FSCACHE STATS PRESENT ==="
+/bin/busybox ls -la /proc/fs/fscache/ 2>&1
+
+echo "=== BEGIN STATS READS x4 ==="
+for i in 1 2 3 4; do
+	echo "--- read $i ---"
+	/bin/busybox cat /proc/fs/fscache/stats
+done
+echo "=== END STATS READS ==="
+
+echo "=== KMEMLEAK: TRIGGER SCAN ==="
+echo scan > /sys/kernel/debug/kmemleak
+/bin/busybox sleep 5
+
+echo "=== KMEMLEAK: SCAN 2 (settle) ==="
+echo scan > /sys/kernel/debug/kmemleak
+/bin/busybox sleep 3
+
+echo "=== BEGIN KMEMLEAK OUTPUT ==="
+/bin/busybox cat /sys/kernel/debug/kmemleak
+echo "=== END KMEMLEAK OUTPUT ==="
+
+echo "=== TEST COMPLETE ==="
+/bin/busybox sync
+/bin/busybox poweroff -f
+/bin/busybox echo o > /proc/sysrq-trigger
+/bin/busybox sleep 1000000
